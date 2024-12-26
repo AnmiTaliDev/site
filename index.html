@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>taliildar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">taliildar</div>
+        <div class="nav-links">
+            <a href="index.html" class="active">Главная</a>
+            <a href="projects.html">Проекты</a>
+            <a href="stats.html">Статистика</a>
+            <a href="preferences.html">Предпочтения</a>
+            <a href="books.html">Книги</a>
+            <a href="poems.html">Стихи</a>
+            <a href="resume.html">Резюме</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="mac-window">
+            <div class="window-buttons">
+                <div class="window-button red"></div>
+                <div class="window-button yellow"></div>
+                <div class="window-button green"></div>
+            </div>
+
+            <div class="content-section">
+                <h1>👋 Привет! Я Ильдар (taliildar)</h1>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <p>🎂 12 лет (24.12.2012)</p>
+                        <p>🌍 Казахстан</p>
+                        <p>👨‍💻 Специализация:</p>
+                        <ul>
+                            <li>Разработчик</li>
+                            <li>Писатель</li>
+                            <li>Системный администратор</li>
+                            <li>Поэт</li>
+                            <li>Тимлид</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-item">
+                        <h2>💻 Языки программирования</h2>
+                        <ul>
+                            <li>Python</li>
+                            <li>C/C++</li>
+                            <li>Go</li>
+                            <li>Rust</li>
+                            <li>Ruby</li>
+                            <li>Jaryq (изучаю)</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-item">
+                        <h2>🌐 Изучаемые языки</h2>
+                        <ul>
+                            <li>Казахский</li>
+                            <li>Арабский</li>
+                            <li>Японский</li>
+                            <li>Английский</li>
+                            <li>Голландский</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>🖥️ Устройства</h2>
+                <div class="devices-grid">
+                    <div class="device-item">
+                        <h3>Основные</h3>
+                        <ul>
+                            <li>Xiaomi Redmi Note 12S (телефон)</li>
+                            <li>Xiaomi Pad 6 (планшет)</li>
+                            <li>Lenovo Ideapad 3 (ноутбук)</li>
+                        </ul>
+                    </div>
+                    <div class="device-item">
+                        <h3>Дополнительные</h3>
+                        <ul>
+                            <li>Xiaomi Redmi Note 7</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>🔗 Социальные сети</h2>
+                <div class="social-links">
+                    <a href="https://github.com/AnmiTaliDev" class="social-link">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub (@AnmiTaliDev)</span>
+                    </a>
+                    <a href="https://tiktok.com/@taliildar" class="social-link">
+                        <i class="fab fa-tiktok"></i>
+                        <span>TikTok (@taliildar)</span>
+                    </a>
+                    <a href="https://youtube.com/@taliildar" class="social-link">
+                        <i class="fab fa-youtube"></i>
+                        <span>YouTube (@taliildar)</span>
+                    </a>
+                    <a href="https://instagram.com/taliildar" class="social-link">
+                        <i class="fab fa-instagram"></i>
+                        <span>Instagram (@taliildar)</span>
+                    </a>
+                    <a href="mailto:taliildar@anmitali.kz" class="social-link">
+                        <i class="fas fa-envelope"></i>
+                        <span>Email</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="mac-window">
+            <h2>📊 GitHub Статистика</h2>
+            <div id="github-stats"></div>
+            <img src="https://github-readme-stats.vercel.app/api?username=AnmiTaliDev&show_icons=true&theme=radical" 
+                 alt="GitHub Stats" class="github-stats-image">
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 taliildar. Все права защищены.</p>
+        <div class="trademark-info">
+            <p>GitHub® является зарегистрированным товарным знаком GitHub, Inc.</p>
+            <p>TikTok® является зарегистрированным товарным знаком ByteDance Ltd.</p>
+            <p>YouTube® является зарегистрированным товарным знаком Google LLC.</p>
+            <p>Instagram® является зарегистрированным товарным знаком Meta Platforms, Inc.</p>
+        </div>
+        <p class="current-time" id="current-time"></p>
+    </footer>
+
+    <script>
+        // Обновление времени
+        function updateTime() {
+            const now = new Date();
+            document.getElementById('current-time').textContent = 
+                `Текущее время (UTC): ${now.toISOString().replace('T', ' ').split('.')[0]}`;
+        }
+        updateTime();
+        setInterval(updateTime, 1000);
+
+        // GitHub Stats
+        fetch('https://api.github.com/users/AnmiTaliDev')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('github-stats').innerHTML = `
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <h3>Репозитории</h3>
+                            <p>${data.public_repos}</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>Подписчики</h3>
+                            <p>${data.followers}</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>Подписки</h3>
+                            <p>${data.following}</p>
+                        </div>
+                    </div>
+                `;
+            })
+            .catch(error => console.error('Error fetching GitHub stats:', error));
+
+        // Активные ссылки в навигации
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            if (link.href === window.location.href) {
+                link.classList.add('active');
+            }
+        });
+    </script>
+</body>
+</html>

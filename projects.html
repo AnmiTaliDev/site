@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Проекты | taliildar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">taliildar</div>
+        <div class="nav-links">
+            <a href="index.html">Главная</a>
+            <a href="projects.html" class="active">Проекты</a>
+            <a href="stats.html">Статистика</a>
+            <a href="preferences.html">Предпочтения</a>
+            <a href="books.html">Книги</a>
+            <a href="poems.html">Стихи</a>
+            <a href="resume.html">Резюме</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="mac-window">
+            <div class="window-buttons">
+                <div class="window-button red"></div>
+                <div class="window-button yellow"></div>
+                <div class="window-button green"></div>
+            </div>
+            
+            <h1>🚀 Организации</h1>
+            <div class="projects-grid">
+                <div class="project-card organization">
+                    <h2>AnmiTali</h2>
+                    <p>Основная организация для всех проектов</p>
+                    <div class="project-links">
+                        <a href="https://github.com/AnmiTaliDev" class="github-link">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card organization">
+                    <h2>FOSP</h2>
+                    <p>Open-Source организация, разрабатывающая открытое ПО</p>
+                    <div class="project-info">
+                        <p>Основные продукты:</p>
+                        <ul>
+                            <li>ATOS License</li>
+                            <li>Jaryq Programming Language</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mac-window">
+            <h2>💻 Основные проекты</h2>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>NurOS</h3>
+                    <p>GNU/Linux independent-дистрибутив</p>
+                    <div class="project-details">
+                        <span class="badge">Open Source</span>
+                        <span class="badge">Linux</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/nuros-linux" class="github-link">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                    <p class="copyright-notice">
+                        Авторское право на NurOS принадлежит Мустафину Ильдару
+                    </p>
+                </div>
+
+                <div class="project-card">
+                    <h3>Tulpar</h3>
+                    <p>Пакетный менеджер для NurOS</p>
+                    <div class="project-details">
+                        <span class="badge">Package Manager</span>
+                        <span class="badge">NurOS</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>Jaryq</h3>
+                    <p>Язык программирования от фонда FOSP</p>
+                    <div class="project-details">
+                        <span class="badge">Programming Language</span>
+                        <span class="badge">FOSP</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Jaryqlang" class="github-link">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>OpenSerfing Browser</h3>
+                    <p>Веб-браузер с открытым исходным кодом</p>
+                    <div class="project-details">
+                        <span class="badge">Browser</span>
+                        <span class="badge">Open Source</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/openserfing" class="github-link">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>OpenSerfing Netutils</h3>
+                    <p>Набор веб-утилит</p>
+                    <div class="project-details">
+                        <span class="badge">Utilities</span>
+                        <span class="badge">Network</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>Alemjeli</h3>
+                    <p>Социальная сеть нового поколения</p>
+                    <div class="project-links">
+                        <a href="https://github.com/alemjeli" class="github-link">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>Sunqar</h3>
+                    <p>Современный мессенджер</p>
+                    <div class="project-links">
+                        <a href="https://github.com/SunqarChat" class="github-link">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>VerveOS</h3>
+                    <p>Android прошивка со встроенным Root-доступом</p>
+                    <div class="project-details">
+                        <span class="badge">Android</span>
+                        <span class="badge">Custom ROM</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 taliildar. Все права защищены.</p>
+        <p class="current-info">
+            Current Date and Time (UTC): <span id="current-time"></span><br>
+        </p>
+    </footer>
+
+    <script>
+        function updateTime() {
+            const now = new Date();
+            document.getElementById('current-time').textContent = 
+                now.toISOString().replace('T', ' ').split('.')[0];
+        }
+        updateTime();
+        setInterval(updateTime, 1000);
+    </script>
+</body>
+</html>
